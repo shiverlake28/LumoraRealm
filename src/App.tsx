@@ -4,7 +4,7 @@ import SplashScreen from "./assets/components/SplashScreen";
 function App() {
   return (
     <div>
-      {/* <SplashScreen/> */}
+      <SplashScreen/>
       <SignUp />
     </div>
   )
