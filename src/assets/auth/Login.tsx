@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {FaGoogle , FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 function Login(){
     const [BtnPressed,SetBtnPressed] = useState(false)
     const [ShowPassword,SetShowPassword] = useState(false)
@@ -37,7 +38,7 @@ function Login(){
                     <a href=""><FaGithub className="w-8 h-8"/></a>
                     <a href=""><FaLinkedin className="w-8 h-8"/></a>
                 </div>
-                <p className="text-[12px] w-full pl-6 pb-5 text-[rgb(220,220,220)]">Don't have an account? <a href="https://www.google.com" className="underline text-[rgb(248,246,236)]/90 ">SignUp</a></p>
+                <p className="text-[12px] w-full pl-6 pb-5 text-[rgb(220,220,220)]">Don't have an account? <Link to="/SignUp"  className="underline text-[rgb(248,246,236)]/90 ">SignUp</Link></p>
             </div>
         </div>
     )

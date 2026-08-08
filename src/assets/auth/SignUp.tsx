@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import {FaGoogle , FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 function SignUp(){
     function HandleSubmit(e: React.FormEvent<HTMLFormElement>){
         e.preventDefault()
@@ -25,6 +27,7 @@ function SignUp(){
         SetLoading(true)
 
     }
+    const navigate = useNavigate()
     const [EmailError,SetEmailError] = useState("");
     const [PassError, SetPassError] = useState("");
     
@@ -34,7 +37,7 @@ function SignUp(){
     const [Loading,SetLoading] = useState(false)
     useEffect(()=>{
         if(!Loading) return;
-        const Signing = setTimeout(()=> {SetLoading(false);console.log("Sucess")},2500)
+        const Signing = setTimeout(()=> {SetLoading(false); if (Email.length > Pword.length) return navigate('/Login')},2500)
         return ()=>{clearTimeout(Signing)}    
     }
 ,[Loading])
@@ -75,7 +78,7 @@ function SignUp(){
                     <a href=""><FaGithub className="w-8 h-8"/></a>
                     <a href=""><FaLinkedin className="w-8 h-8"/></a>
                 </div>  
-                <p className="text-[12px] w-full pl-6 pb-6 text-[rgb(220,220,220)]">Already have an account? <a href="www.google.com" className="underline text-[rgb(248,246,236)]/90 ">Login</a></p>
+                <p className="text-[12px] w-full pl-6 pb-6 text-[rgb(220,220,220)]">Already have an account? <Link to="/Login" className="underline text-[rgb(248,246,236)]/90 ">Login</Link></p>
             </div>
         </div>
     )
