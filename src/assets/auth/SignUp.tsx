@@ -23,7 +23,7 @@ function SignUp(){
         }
         console.log('Email:',Email)
         console.log('Password:',Pword)
-        SetPassError("")
+    
         SetLoading(true)
 
     }
@@ -54,9 +54,9 @@ function SignUp(){
                 <p className="text-[rgb(214,168,150)]/90 text-lg">Experience the Extraordinary</p>
 
                 <form id="SignUpform" onSubmit={HandleSubmit} className="w-full pl-5 pr-5 flex flex-col gap-3 h-auto   text-[rgb(248,242,236)]/90 ">
-                    {/* Email */}
+            {/* Email */}
                     <label className="text-lg  text-[rgb(248,242,236)]">Email</label>
-                    <input type="email" value={Email} onChange={(e) => {SetEmail(e.target.value); SetEmailError("")}}placeholder="e.g:you@gmail.com"  className="w-full h-10 pl-2 text-black border border-black/90 rounded-md bg-[rgb(177,178,181)] placeholder:text-black/40 hover:shadow-sm hover:shadow-black"/>
+                    <input type="email" value={Email} onChange={(e) => {SetEmail(e.target.value); SetEmailError("")}} placeholder="e.g:you@gmail.com"  className="w-full h-10 pl-2 text-black border border-black/90 rounded-md bg-[rgb(177,178,181)] placeholder:text-black/40 hover:shadow-sm hover:shadow-black"/>
                     {EmailError && (<p className="text-red-400 text-[10px] h-2">{EmailError}</p>)}
                     <a href="https://www.google.com" className="text-[12px] pl-1">Forget Email?</a>
                     {/* Password */}
@@ -66,7 +66,7 @@ function SignUp(){
                     <p className="select-none absolute right-3 top-3 cursor-pointer text-black" onClick={()=>{SetShowPassword(!ShowPassword)}}>{ShowPassword? <FaEyeSlash/> : <FaEye/>}</p></div>
                     {PassError && (<p className="text-red-400 text-[10px] h-2">{PassError}</p>)}
                     <a href="https://www.google.com" className="text-[12px] pl-1">Forget Password?</a>
-                    
+
                 </form>
                 {/* button */}
                 <button type="submit" form="SignUpform" disabled={Loading} className={`w-50 h-12 border-2 rounded-3xl bg-[rgba(30,41,59,0.81)] text-[rgb(244,230,236)]/80 ${Loading? 'opacity-60 cursor-not-allowed': "opacity-100 cursor-pointer"}`}>{Loading? 'Signing In....': "SignUp"}</button>
