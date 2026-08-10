@@ -42,18 +42,18 @@ function SignUp(){
     }
 ,[Loading])
     return(
-        <div className="w-full min-h-screen font-space flex flex-col  justify-start items-center  pt-8 bg-linear-to-b from-[rgb(1,28,30)] via-[rgb(4,54,56)] to-[rgb(2,34,36)]">{/*entire bg*/}
-            <div className="w-100 h-auto  space-y-5 pb-5 text-center ">
+        <div className="w-full min-h-screen font-space flex flex-col  justify-start items-center  pt-6 px-2 md:pt-10 bg-linear-to-b from-[rgb(1,28,30)] via-[rgb(4,54,56)] to-[rgb(2,34,36)]">{/*entire bg*/}
+            <div className="w-[90%] max-w-100 mx-auto h-auto  space-y-5 pb-5 text-center ">
                 {/*lumoraRealm and the tagline */}
-                <p className="bg-linear-to-br from-[rgb(255,247,242)] to-[rgb(214,168,150)] bg-clip-text text-transparent text-3xl sm:text-2xl">✨LumoraRealm✨</p>
-                <p className="bg-linear-to-br from-[rgb(255,247,242)] to-[rgb(214,168,150)] bg-clip-text text-transparent text-xl sm:text-lg capitalize">A world where illuminated stories  come to life.</p>
+                <p className="bg-linear-to-br from-[rgb(255,247,242)] to-[rgb(214,168,150)] bg-clip-text text-transparent text-2xl md:text-3xl">✨LumoraRealm✨</p>
+                <p className="bg-linear-to-br from-[rgb(255,247,242)] to-[rgb(214,168,150)] bg-clip-text text-transparent text-lg md:text-xl capitalize">A world where illuminated stories  come to life.</p>
             </div>
             {/*SignUp card */}
-            <div className="w-full h-full sm:w-100 sm:h-auto pt-1 flex flex-col items-center justify-start gap-3 bg-linear-to-b from-[rgb(8,70,72)] via-[rgb(11,82,84)] to-[rgb(14,96,98)] border-3 border-stone-400 hover:border-gray-400 shadow-xl shadow-gray-400/50 hover:shadow-gray-400 rounded-3xl">
+            <div className="w-auto md:w-100 h-auto md:h-auto pt-1 flex flex-col items-center justify-start gap-2 md:gap-3 bg-linear-to-b from-[rgb(8,70,72)] via-[rgb(11,82,84)] to-[rgb(14,96,98)] border-3 border-stone-400 hover:border-gray-400 shadow-xl shadow-gray-400/50 hover:shadow-gray-400 rounded-3xl">
                 <p className="text-[rgb(214,168,150)]/90 text-xl">Step Inside</p>
                 <p className="text-[rgb(214,168,150)]/90 text-lg">Experience the Extraordinary</p>
 
-                <form id="SignUpform" onSubmit={HandleSubmit} className="w-full pl-5 pr-5 flex flex-col gap-3 h-auto   text-[rgb(248,242,236)]/90 ">
+                <form id="SignUpform" onSubmit={HandleSubmit} className="w-full px-4 md:px-5 flex flex-col gap-3 h-auto   text-[rgb(248,242,236)]/90 ">
             {/* Email */}
                     <label className="text-lg  text-[rgb(248,242,236)]">Email</label>
                     <input type="email" value={Email} onChange={(e) => {SetEmail(e.target.value); SetEmailError("")}} placeholder="e.g:you@gmail.com"  className="w-full h-10 pl-2 text-black border border-black/90 rounded-md bg-[rgb(177,178,181)] placeholder:text-black/40 hover:shadow-sm hover:shadow-black"/>
@@ -69,16 +69,16 @@ function SignUp(){
 
                 </form>
                 {/* button */}
-                <button type="submit" form="SignUpform" disabled={Loading} className={`w-50 h-12 border-2 rounded-3xl bg-[rgba(30,41,59,0.81)] text-[rgb(244,230,236)]/80 ${Loading? 'opacity-60 cursor-not-allowed': "opacity-100 cursor-pointer"}`}>{Loading? 'Signing In....': "SignUp"}</button>
+                <button type="submit" form="SignUpform" disabled={Loading} className={`w-40 sm:w-50 max-w-full h-12  border-2 rounded-3xl bg-[rgba(30,41,59,0.81)] text-[rgb(244,230,236)]/80 ${Loading? 'opacity-60 cursor-not-allowed': "opacity-100 cursor-pointer"}`}>{Loading? 'Signing In....': "SignUp"}</button>
                 <p className="text-[rgb(170,170,170)]">-------------- Or --------------</p>
                 {/* Other signUp options */}
-                <div className="flex gap-10 ">
+                <div className="flex gap-8 md:gap-10 ">
                     <a href=""> <FaGoogle className="w-8 h-8"/></a>
                     <a href=""><FaFacebook className="w-8 h-8" /></a>
                     <a href=""><FaGithub className="w-8 h-8"/></a>
                     <a href=""><FaLinkedin className="w-8 h-8"/></a>
                 </div>  
-                <p className="text-[12px] w-full pl-6 pb-6 text-[rgb(220,220,220)]">Already have an account? <Link to="/Login" className="underline text-[rgb(248,246,236)]/90 ">Login</Link></p>
+                <p className="text-[12px] w-full px-4 md:pl-6 pb-5 text-[rgb(220,220,220)]">Already have an account? <Link to="/Login" className="underline text-[rgb(248,246,236)]/90 ">Login</Link></p>
             </div>
         </div>
     )
