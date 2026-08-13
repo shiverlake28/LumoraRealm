@@ -25,7 +25,7 @@ function SplashScreen(){
 }}, []); 
 
     return(
-        <div className={`font-cinzel w-full min-h-screen flex  flex-col text-xl sm:text-xl md:text-3xl lg:text-3xl items-center justify-center pb-16 sm:pb-20 md:pb-20 lg:pb-20 bg-linear-to-b from-[rgb(1,28,30)] via-[rgb(4,54,56)] to-[rgb(2,34,36)] transition-opacity duration-500 ${FadeOut ? "opacity-0" : "opacity-100"} tracking-widests`}>
+        <div className={`font-cinzel w-full min-h-screen flex  flex-col text-xl sm:text-xl md:text-3xl lg:text-3xl items-center justify-center pb-16 sm:pb-20 md:pb-20 lg:pb-20 bg-linear-to-b from-[rgb(8,27,34)] via-[rgb(17,32,43)] to-[rgb(39,24,39)] transition-opacity duration-500 ${FadeOut ? "opacity-0" : "opacity-100"} tracking-widests`}>
             <div><img src="/LumoraRealmLogo-nobg.png" className={`rounded-full w-60 h-60 sm:w-90 sm:h-90 md:w-100 md:h-100 lg:w-100 lg:h-100 drop-shadow-[0_0_35px_rgba(170,170,170,0.7)] transition-opacity duration-1000 ${ShowLogo ? 'opacity-100' : 'opacity-0'}`}/></div>
 
             <div className="w-full sm:w-full md:w-full lg:w-full flex flex-wrap justify-center gap-1">

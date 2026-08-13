@@ -42,7 +42,7 @@ function SignUp(){
     }
 ,[Loading])
     return(
-        <div className="w-full min-h-screen font-space flex flex-col  justify-start items-center  pt-6 px-2 md:pt-10 bg-linear-to-b from-[rgb(1,28,30)] via-[rgb(4,54,56)] to-[rgb(2,34,36)]">{/*entire bg*/}
+        <div className="w-full min-h-screen font-space flex flex-col  justify-start items-center  pt-6 px-2 md:pt-10 bg-linear-to-b from-[rgb(8,27,34)] via-[rgb(17,32,43)] to-[rgb(39,24,39)]">{/*entire bg*/}
             <div className="w-[90%] max-w-100 mx-auto h-auto  space-y-5 pb-5 text-center ">
                 {/*lumoraRealm and the tagline */}
                 <p className="bg-linear-to-br from-[rgb(255,247,242)] to-[rgb(214,168,150)] bg-clip-text text-transparent text-2xl md:text-3xl">✨LumoraRealm✨</p>
