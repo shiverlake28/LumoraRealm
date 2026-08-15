@@ -3,6 +3,7 @@ import {FaGoogle , FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { BsStars } from "react-icons/bs";
 function SignUp(){
     function HandleSubmit(e: React.FormEvent<HTMLFormElement>){
         e.preventDefault()
@@ -45,7 +46,11 @@ function SignUp(){
         <div className="w-full min-h-screen font-space flex flex-col  justify-start items-center  pt-6 px-2 md:pt-10 bg-linear-to-b from-[rgb(8,27,34)] via-[rgb(17,32,43)] to-[rgb(39,24,39)]">{/*entire bg*/}
             <div className="w-[90%] max-w-100 mx-auto h-auto  space-y-5 pb-5 text-center ">
                 {/*lumoraRealm and the tagline */}
-                <p className="bg-linear-to-br from-[rgb(255,247,242)] to-[rgb(214,168,150)] bg-clip-text text-transparent text-2xl md:text-3xl">✨LumoraRealm✨</p>
+                <div className="flex justify-center gap-2">
+                <BsStars className="w-8 h-8 text-amber-100" />
+                <p className="bg-linear-to-br from-[rgb(255,247,242)] to-[rgb(214,168,150)] bg-clip-text text-transparent text-2xl md:text-3xl"> LumoraRealm </p>
+                <BsStars className="w-8 h-8 text-amber-100 -scale-x-100 " />
+                </div>
                 <p className="bg-linear-to-br from-[rgb(255,247,242)] to-[rgb(214,168,150)] bg-clip-text text-transparent text-lg md:text-xl capitalize">A world where illuminated stories  come to life.</p>
             </div>
             {/*SignUp card */}
