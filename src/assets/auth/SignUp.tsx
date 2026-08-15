@@ -49,18 +49,18 @@ function SignUp(){
                 <p className="bg-linear-to-br from-[rgb(255,247,242)] to-[rgb(214,168,150)] bg-clip-text text-transparent text-lg md:text-xl capitalize">A world where illuminated stories  come to life.</p>
             </div>
             {/*SignUp card */}
-            <div className="w-auto md:w-100 h-auto md:h-auto pt-1 flex flex-col items-center justify-start gap-2 md:gap-3 bg-linear-to-b from-[rgb(8,70,72)] via-[rgb(11,82,84)] to-[rgb(14,96,98)] border-3 border-stone-400 hover:border-gray-400 shadow-xl shadow-gray-400/50 hover:shadow-gray-400 rounded-3xl">
-                <p className="text-[rgb(214,168,150)]/90 text-xl">Step Inside</p>
-                <p className="text-[rgb(214,168,150)]/90 text-lg">Experience the Extraordinary</p>
+            <div className="w-auto md:w-100 h-auto md:h-auto pt-1 flex flex-col items-center justify-start gap-2 md:gap-3 bg-linear-to-b from-[rgb(105,108,111)] via-[rgb(125,123,120)] to-[rgb(145,137,126)] border-3 border-[rgb(202,190,165)]  shadow-lg shadow-gray-400/50 hover:shadow-gray-400 rounded-3xl">
+                <p className="text-[rgb(25,25,28)]/90 text-xl">Step Inside</p>
+                <p className="text-[rgb(25,25,28)]/90 text-lg">Experience the Extraordinary</p>
 
-                <form id="SignUpform" onSubmit={HandleSubmit} className="w-full px-4 md:px-5 flex flex-col gap-3 h-auto   text-[rgb(248,242,236)]/90 ">
+                <form id="SignUpform" onSubmit={HandleSubmit} className="w-full px-4 md:px-5 flex flex-col gap-3 h-auto   text-[rgb(25,25,28)]/90 ">
             {/* Email */}
-                    <label className="text-lg  text-[rgb(248,242,236)]">Email</label>
+                    <label className="text-lg  text-[rgb(25,25,28)]">Email</label>
                     <input type="email" value={Email} onChange={(e) => {SetEmail(e.target.value); SetEmailError("")}} placeholder="e.g:you@gmail.com"  className="w-full h-10 pl-2 text-black border border-black/90 rounded-md bg-[rgb(177,178,181)] placeholder:text-black/40 hover:shadow-sm hover:shadow-black"/>
                     {EmailError && (<p className="text-red-400 text-[10px] h-2">{EmailError}</p>)}
                     <a href="https://www.google.com" className="text-[12px] pl-1">Forget Email?</a>
                     {/* Password */}
-                    <label className="text-lg  text-[rgb(248,242,236)]">Password</label>
+                    <label className="text-lg  text-[rgb(25,25,28)]">Password</label>
                     <div className="relative w-full">
                     <input type={ShowPassword?'text': "password"} value={Pword} onChange={(e) => {SetPword(e.target.value); SetPassError("")}} placeholder="Password"  className="pl-2  text-black w-full h-10 border border-black/90 rounded-md bg-[rgb(177,178,181)] placeholder:text-black/40 hover:shadow-sm hover:shadow-black"/>
                     <p className="select-none absolute right-3 top-3 cursor-pointer text-black" onClick={()=>{SetShowPassword(!ShowPassword)}}>{ShowPassword? <FaEyeSlash/> : <FaEye/>}</p></div>
@@ -70,7 +70,7 @@ function SignUp(){
                 </form>
                 {/* button */}
                 <button type="submit" form="SignUpform" disabled={Loading} className={`w-40 sm:w-50 max-w-full h-12  border-2 rounded-3xl bg-[rgba(30,41,59,0.81)] text-[rgb(244,230,236)]/80 ${Loading? 'opacity-60 cursor-not-allowed': "opacity-100 cursor-pointer"}`}>{Loading? 'Signing In....': "SignUp"}</button>
-                <p className="text-[rgb(170,170,170)]">-------------- Or --------------</p>
+                <p className="text-gray-700">-------------- Or --------------</p>
                 {/* Other signUp options */}
                 <div className="flex gap-8 md:gap-10 ">
                     <a href=""> <FaGoogle className="w-8 h-8"/></a>
@@ -78,7 +78,7 @@ function SignUp(){
                     <a href=""><FaGithub className="w-8 h-8"/></a>
                     <a href=""><FaLinkedin className="w-8 h-8"/></a>
                 </div>  
-                <p className="text-[12px] w-full px-4 md:pl-6 pb-5 text-[rgb(220,220,220)]">Already have an account? <Link to="/Login" className="underline text-[rgb(248,246,236)]/90 ">Login</Link></p>
+                <p className="text-[12px] w-full px-4 md:pl-6 pb-5 text-[rgb(45,45,48)] font-bold">Already have an account? <Link to="/Login" className="underline text-[rgb(248,246,236)]/90 ">Login</Link></p>
             </div>
         </div>
     )
