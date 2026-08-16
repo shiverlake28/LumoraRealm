@@ -56,7 +56,7 @@ function SignUp(){
             {/*SignUp card */}
             <div className="w-auto md:w-100 h-auto md:h-auto pt-1 flex flex-col items-center justify-start gap-2 md:gap-3 bg-linear-to-b from-[rgb(105,108,111)] via-[rgb(125,123,120)] to-[rgb(145,137,126)] border-3 border-[rgb(202,190,165)]  shadow-lg shadow-gray-400/50 hover:shadow-gray-400 rounded-3xl">
                 <p className="text-[rgb(25,25,28)]/90 text-xl">Step Inside</p>
-                <p className="text-[rgb(25,25,28)]/90 text-lg">Experience the Extraordinary</p>
+                <p className="text-[rgb(25,25,28)]/90 text-lg text-center">Experience the Extraordinary</p>
 
                 <form id="SignUpform" onSubmit={HandleSubmit} className="w-full px-4 md:px-5 flex flex-col gap-3 h-auto   text-[rgb(25,25,28)]/90 ">
             {/* Email */}
@@ -75,9 +75,9 @@ function SignUp(){
                 </form>
                 {/* button */}
                 <button type="submit" form="SignUpform" disabled={Loading} className={`w-40 sm:w-50 max-w-full h-12  border-2 rounded-3xl bg-[rgba(30,41,59,0.81)] text-[rgb(244,230,236)]/80 ${Loading? 'opacity-60 cursor-not-allowed': "opacity-100 cursor-pointer"}`}>{Loading? 'Signing In....': "SignUp"}</button>
-                <p className="text-gray-700">-------------- Or --------------</p>
+                <p className="text-gray-700 text-[10px] sm:text-[16px]">-------------- Or --------------</p>
                 {/* Other signUp options */}
-                <div className="flex gap-8 md:gap-10 ">
+                <div className="flex gap-8 md:gap-10 pb-1">
                     <a href=""> <FaGoogle className="w-8 h-8"/></a>
                     <a href=""><FaFacebook className="w-8 h-8" /></a>
                     <a href=""><FaGithub className="w-8 h-8"/></a>

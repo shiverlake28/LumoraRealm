@@ -68,8 +68,8 @@ function Login(){
                 {/* Buttons */}
                 <button form="LoginForm" disabled={Loading} className={`w-40 sm:w-50 max-w-full h-12  border-2 rounded-3xl bg-[rgba(30,41,59,0.81)] text-[rgb(244,230,236)]/80 ${Loading? 'opacity-60 cursor-not-allowed': "opacity-100 cursor-pointer"}`} >{Loading? "Loading..." :"Login"}</button>
                 
-                <p className="text-gray-700">-------------- Or --------------</p>
-                <div className="flex gap-8 md:gap-10 ">
+                <p className="text-gray-700 text-[10px] sm:text-[16px]">-------------- Or --------------</p>
+                <div className="flex gap-8 md:gap-10 pb-1">
                     <a href=""> <FaGoogle className="w-8 h-8"/></a>
                     <a href=""><FaFacebook className="w-8 h-8" /></a>
                     <a href=""><FaGithub className="w-8 h-8"/></a>
