@@ -29,7 +29,7 @@ function SearchBox(){
             <div className="space-y-6">
             <h1 className="text-[rgb(235,231,220)]/95 text-lg sm:text-xl">Recent Searches</h1>
             <div className="w-full h-auto p-1 gap-10 bg-[rgb(24,26,21)]/40 flex  text-[rgb(226,218,218)]/80 border-2 border-gray-300/70   rounded-xl text-lg ">
-                {RecentSearches.map((search, index) => (
+                {RecentSearches.map((search) => (
             <div className="cursor-pointer px-2 flex  bg-[rgb(24,27,31)]/70 rounded-lg border border-gray-300/20">
                 {search} 
             </div> 
