@@ -21,18 +21,19 @@ function SearchBox(){
             <div className="w-full h-auto p-2 flex justify-start items-end pb-3 gap-10 bg-[rgb(24,26,21)]/50 border-2 border-gray-300/70 rounded-3xl text-[rgb(226,218,218)]/80 ">
                 <Icon icon="gala:search" width="50" height="50" className=" -scale-x-100 ml-2"/>
                 <div className="flex-1 "><input type="text" value={Search} onChange={(e)=> SetSearch(e.target.value)} onKeyDown={(e)=>{ if (e.key ==="Enter"){HandleSearch()}}} placeholder="Search movies,series,sports,actors..." className="w-full text-2xl placeholder:text-[rgb(139,137,137)] outline-none" /></div>
-                < X className="w-10 h-10 cursor-pointer" onClick={() => SetSearch("")}/>
+                {Search && 
+                < X className="w-10 h-10 cursor-pointer" onClick={() => SetSearch("")}/>}
             </div>
             {/*Recent Searches*/}
             {RecentSearches.length > 0 &&
             <div className="space-y-6">
             <h1 className="text-[rgb(235,231,220)]/95 text-lg sm:text-xl">Recent Searches</h1>
-            <div className="w-full h-auto p-1 bg-[rgb(24,26,21)]/40 flex gap-10 m text-[rgb(226,218,218)]/80 border-3 border-gray-300/70 space-x-2  rounded-xl text-lg ">
+            <div className="w-full h-auto p-1 gap-10 bg-[rgb(24,26,21)]/40 flex  text-[rgb(226,218,218)]/80 border-2 border-gray-300/70   rounded-xl text-lg ">
                 {RecentSearches.map((search, index) => (
-            <div className="cursor-pointer px-2  bg-[rgb(24,27,31)]/70 rounded-lg border border-gray-300/20">
-                {search}
-            </div>
-        ))}
+            <div className="cursor-pointer px-2 flex  bg-[rgb(24,27,31)]/70 rounded-lg border border-gray-300/20">
+                {search} 
+            </div> 
+        ))}<X className="h-4 w-4 mt-2" onClick={()=>{SetRecentSearches([])}} />
             </div></div>}
              {/*Trending Searches  */}
             <div>
