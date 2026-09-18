@@ -1,6 +1,28 @@
 import { Icon } from "@iconify/react";
 import { X } from "lucide-react";
 import { useState } from "react";
+const TrendingSearches = [
+    {name:"Avengers",img:"marvel.jpg"},
+    {name:"Stranger Things",img:"strangers_thing.jpg"},
+    {name:"Wednesday",img:"wednesday.jpg"},
+    {name:"The Batman",img:"Batman.jpg"},
+    {name:"Formula 1",img:"Formula1.jpg"}
+]
+const TopMatch = [
+    {name:"Avengers",img:"marvel.jpg"},
+    {name:"Stranger Things",img:"strangers_thing.jpg"},
+    {name:"Wednesday",img:"wednesday.jpg"},
+    {name:"The Batman",img:"Batman.jpg"},
+    {name:"Formula 1",img:"Formula1.jpg"}
+]
+const MorePicks = [
+    {name:"Avengers",img:"marvel.jpg"},
+    {name:"Stranger Things",img:"strangers_thing.jpg"},
+    {name:"Wednesday",img:"wednesday.jpg"},
+    {name:"The Batman",img:"Batman.jpg"},
+    {name:"Formula 1",img:"Formula1.jpg"}
+]
+
 function SearchBox(){
     function HandleSearch(){
         if (!Search.trim()){
@@ -8,10 +30,11 @@ function SearchBox(){
         }
         else{
             SetRecentSearches((prev) => [Search , ...prev].slice(0,3))
-            SetSearch("")
+            SetHasSearched(true)
         }
 
     }
+    const [HasSearched,SetHasSearched] = useState(false)
     const [RecentSearches,SetRecentSearches] = useState<string[]>([])
     const [Search,SetSearch] = useState("")
 
@@ -28,30 +51,42 @@ function SearchBox(){
             {RecentSearches.length > 0 &&
             <div className="space-y-6">
             <h1 className="text-[rgb(235,231,220)]/95 text-lg sm:text-xl">Recent Searches</h1>
-            <div className="w-full h-auto p-1 gap-10 bg-[rgb(24,26,21)]/40 flex  text-[rgb(226,218,218)]/80 border-2 border-gray-300/70   rounded-xl text-lg ">
+            <div className="w-fit h-auto p-1 gap-4 items-center bg-[rgb(24,26,21)]/40 flex  text-[rgb(226,218,218)]/80 border-2 border-gray-300/70   rounded-xl text-lg ">
                 {RecentSearches.map((search) => (
             <div className="cursor-pointer px-2 flex  bg-[rgb(24,27,31)]/70 rounded-lg border border-gray-300/20">
                 {search} 
             </div> 
-        ))}<X className="h-4 w-4 mt-2" onClick={()=>{SetRecentSearches([])}} />
+        ))}<X className="h-4 w-4 mt-1" onClick={()=>{SetRecentSearches([])}} />
             </div></div>}
              {/*Trending Searches  */}
+            {!HasSearched && <div className="flex flex-col gap-10">
+            <h1 className="text-[rgb(235,231,220)]/95 text-lg sm:text-xl">Trending Searches</h1> 
+            <div> 
+                <div className="h-auto w-full gap-3 flex "> {TrendingSearches.map((search) => (
+            <div className="flex flex-col  justify-end h-60 w-50 border border-gray-400 hover:border-white hover:shadow-sm shadow-white rounded-lg bg-[rgb(24,26,21)]/50 text-white font-semibold text-center cursor-pointer  bg-cover  bg-center bg-no-repeat" style={{ backgroundImage: `url(${search.img})` }} key={search.name}>
+                <div className="w-full bg-linear-to-t from-blue-900/85 via-black/50 to-transparent rounded-b-lg px-2 py-3">{search.name}</div>
+            </div>  
+        ))}</div>
+                
+            </div> </div>}
+            {/* Top Match */}
+            {HasSearched && <div className="flex flex-col gap-10">
+                <h1 className="text-[rgb(235,231,220)]/95 text-lg sm:text-xl">Top Match</h1>
             <div>
-                <div></div>
-                <div></div>//The trending searches
-                <div></div>
-                <div></div>
+                
+                <div className="h-auto w-full gap-3 flex "> {TopMatch.map((search) => (
+            <div className="flex flex-col  justify-end h-60 w-50 border border-gray-400 hover:border-white hover:shadow-sm shadow-white rounded-lg bg-[rgb(24,26,21)]/50 text-white font-semibold text-center cursor-pointer  bg-cover  bg-center bg-no-repeat" style={{ backgroundImage: `url(${search.img})` }} key={search.name}>
+                <div className="w-full bg-linear-to-t from-blue-900/85 via-black/50 to-transparent rounded-b-lg px-2 py-3">{search.name}</div>
+            </div>  
+        ))}</div>
+                
             </div>
-            {/* Search result */}
-            <div>
-                <h2></h2>//Top Match
-                <div></div>//Top match card + poster
-            </div>
+            
             {/* More Picks */}
             <div>
                 <h2></h2>//More Picks
                 <div></div>//More picks card + poster
-            </div>
+            </div></div>}
 
             {/* Creator details */}
             <div>
