@@ -49,44 +49,44 @@ function SearchBox(){
         <div>
 
         
-        <div className="w-full min-h-screen font-space flex flex-col justify-start p-3 sm:p-15 sm:pt-10 items-start gap-4 sm:gap-10 min-[1920px]:p-24 min-[1920px]:pt-14 min-[1920px]:gap-12 bg-linear-to-b from-[rgb(20,48,54)] via-[rgb(35,45,57)] to-[rgb(58,39,57)]">
+        <div className="w-full min-h-screen font-space flex flex-col justify-start p-3 min-[640px]:p-15 min-[640px]:pt-10 items-start gap-4 min-[640px]:gap-10 min-[1920px]:p-24 min-[1920px]:pt-14 min-[1920px]:gap-12 min-[2560px]:p-32 min-[2560px]:pt-20 min-[2560px]:gap-16 bg-linear-to-b from-[rgb(20,48,54)] via-[rgb(35,45,57)] to-[rgb(58,39,57)]">
             {/*Searchbar*/}
-            <div className="w-full h-auto p-2 flex justify-start items-end pb-3 gap-2 sm:gap-10 bg-[rgb(24,26,21)]/50 border-2 border-gray-300/70 rounded-3xl text-[rgb(226,218,218)]/80 ">
-                <Icon icon="gala:search" width="50" height="50" className=" -scale-x-100 ml-2 w-8 h-8 sm:w-12.5 sm:h-12.5 min-[1920px]:w-16 min-[1920px]:h-16"/>
-                <div className="flex-1 "><input type="text" value={Search} onChange={(e)=> SetSearch(e.target.value)} onKeyDown={(e)=>{ if (e.key ==="Enter"){HandleSearch()}}} placeholder={IsMobile ? "Search" : "Search movies,series,sports,actors..."} className="w-full text-sm min-[360px]:text-base sm:text-2xl min-[1920px]:text-3xl placeholder:text-[rgb(139,137,137)] outline-none" /></div>
+            <div className="w-full h-auto p-2 min-[2560px]:p-6 flex justify-start items-end pb-3 min-[2560px]:pb-6 gap-2 min-[640px]:gap-10 min-[2560px]:gap-14 bg-[rgb(24,26,21)]/50 border-2 border-gray-300/70 rounded-3xl text-[rgb(226,218,218)]/80 ">
+                <Icon icon="gala:search" width="50" height="50" className=" -scale-x-100 ml-2 w-8 h-8 min-[640px]:w-12.5 min-[640px]:h-12.5 min-[1920px]:w-16 min-[1920px]:h-16 min-[2560px]:w-24 min-[2560px]:h-24"/>
+                <div className="flex-1 "><input type="text" value={Search} onChange={(e)=> SetSearch(e.target.value)} onKeyDown={(e)=>{ if (e.key ==="Enter"){HandleSearch()}}} placeholder={IsMobile ? "Search" : "Search movies,series,sports,actors..."} className="w-full text-sm min-[360px]:text-base min-[640px]:text-2xl min-[1920px]:text-3xl min-[2560px]:text-5xl placeholder:text-[rgb(139,137,137)] outline-none" /></div>
                 {Search && 
-                < X className="w-6 h-6 sm:w-10 sm:h-10 min-[1920px]:w-13 min-[1920px]:h-13 cursor-pointer" onClick={() => SetSearch("")}/>}
+                < X className="w-6 h-6 min-[640px]:w-10 min-[640px]:h-10 min-[1920px]:w-13 min-[1920px]:h-13 min-[2560px]:w-18 min-[2560px]:h-18 cursor-pointer" onClick={() => SetSearch("")}/>}
             </div>
             {/*Recent Searches*/}
             {RecentSearches.length > 0 &&
-            <div className="space-y-6">
-            <h1 className="text-[rgb(235,231,220)]/95 text-base sm:text-xl min-[1500px]:text-2xl min-[1920px]:text-3xl">Recent Searches</h1>
-            <div className="w-fit sm:w-fit h-auto p-1 gap-2 sm:gap-4 items-center bg-[rgb(24,26,21)]/40 flex flex-wrap text-[rgb(226,218,218)]/80 border-2 border-gray-300/70 rounded-xl text-sm sm:text-lg min-[1500px]:text-xl min-[1920px]:text-2xl ">
+            <div className="space-y-6 min-[2560px]:space-y-10">
+            <h1 className="text-[rgb(235,231,220)]/95 text-base min-[640px]:text-xl min-[1500px]:text-2xl min-[1920px]:text-3xl min-[2560px]:text-6xl">Recent Searches</h1>
+            <div className="w-fit min-[640px]:w-fit h-auto p-1 min-[2560px]:p-3 gap-2 min-[640px]:gap-4 min-[2560px]:gap-6 items-center bg-[rgb(24,26,21)]/40 flex flex-wrap text-[rgb(226,218,218)]/80 border-2 border-gray-300/70 rounded-xl text-sm min-[640px]:text-lg min-[1500px]:text-xl min-[1920px]:text-2xl min-[2560px]:text-4xl ">
                 {RecentSearches.map((search) => (
-            <div className="cursor-pointer px-2 py-1 sm:py-0 flex  bg-[rgb(24,27,31)]/70 rounded-lg border border-gray-300/20">
+            <div className="cursor-pointer px-2 py-1 min-[640px]:py-0 min-[2560px]:px-4 min-[2560px]:py-2 flex  bg-[rgb(24,27,31)]/70 rounded-lg border border-gray-300/20">
                 {search} 
             </div> 
-        ))}<X className="h-4 w-4 sm:h-5 sm:w-5 min-[1920px]:h-6 min-[1920px]:w-6 mt-1" onClick={()=>{SetRecentSearches([])}} />
+        ))}<X className="h-4 w-4 min-[640px]:h-5 min-[640px]:w-5 min-[1920px]:h-6 min-[1920px]:w-6 min-[2560px]:h-9 min-[2560px]:w-9 mt-1" onClick={()=>{SetRecentSearches([])}} />
             </div></div>}
              {/*Trending Searches  */}
-            {!HasSearched && <div className="flex flex-col gap-6 sm:gap-10">
-            <h1 className="text-[rgb(235,231,220)]/95 text-base sm:text-xl min-[1500px]:text-2xl min-[1920px]:text-3xl">Trending Searches</h1> 
+            {!HasSearched && <div className="flex flex-col gap-6 min-[640px]:gap-10 min-[2560px]:gap-16">
+            <h1 className="text-[rgb(235,231,220)]/95 text-base min-[640px]:text-xl min-[1500px]:text-2xl min-[1920px]:text-3xl min-[2560px]:text-6xl">Trending Searches</h1> 
             <div> 
-                <div className="h-auto w-full gap-2 sm:gap-3 flex flex-wrap "> {TrendingSearches.map((search) => (
-            <div className="flex flex-col  justify-end w-[45%] min-w-30 h-40 sm:w-50 sm:h-60 sm:min-w-0 min-[1500px]:w-60 min-[1500px]:h-68 min-[1920px]:w-70 min-[1920px]:h-72 min-[2560px]:w-85 min-[2560px]:h-80 border border-gray-400 hover:border-white hover:shadow-sm shadow-white rounded-lg bg-[rgb(24,26,21)]/50 text-white font-semibold text-center cursor-pointer  bg-cover  bg-center bg-no-repeat" style={{ backgroundImage: `url(${search.img})` }} key={search.name}>
-                <div className="w-full bg-linear-to-t from-pink-900/85 via-black/50 to-transparent rounded-b-lg px-2 py-3">{search.name}</div>
+                <div className="h-auto w-full gap-2 min-[640px]:gap-3 min-[2560px]:gap-6 flex flex-wrap "> {TrendingSearches.map((search) => (
+            <div className="flex flex-col  justify-end w-[45%] min-w-30 h-40 min-[640px]:w-50 min-[640px]:h-60 min-[640px]:min-w-0 min-[1500px]:w-60 min-[1500px]:h-68 min-[1920px]:w-70 min-[1920px]:h-72 min-[2560px]:w-136 min-[2560px]:h-120 border border-gray-400 hover:border-white hover:shadow-sm shadow-white rounded-lg bg-[rgb(24,26,21)]/50 text-white font-semibold text-center cursor-pointer  bg-cover  bg-center bg-no-repeat" style={{ backgroundImage: `url(${search.img})` }} key={search.name}>
+                <div className="w-full bg-linear-to-t from-pink-900/85 via-black/50 to-transparent rounded-b-lg px-2 py-3 min-[2560px]:px-6 min-[2560px]:py-6 min-[2560px]:text-4xl">{search.name}</div>
             </div>  
         ))}</div>
                 
             </div> </div>}
             {/* Top Match */}
-            {HasSearched && <div className="flex flex-col gap-6 sm:gap-10">
-                <h1 className="text-[rgb(235,231,220)]/95 text-base sm:text-xl min-[1500px]:text-2xl min-[1920px]:text-3xl">Top Match</h1>
+            {HasSearched && <div className="flex flex-col gap-6 min-[640px]:gap-10 min-[2560px]:gap-16">
+                <h1 className="text-[rgb(235,231,220)]/95 text-base min-[640px]:text-xl min-[1500px]:text-2xl min-[1920px]:text-3xl min-[2560px]:text-6xl">Top Match</h1>
             <div>
                 
-                <div className="h-auto w-full gap-2 sm:gap-3 flex flex-wrap "> {TopMatch.map((search) => (
-            <div className="flex flex-col  justify-end w-[45%] min-w-30 h-40 sm:w-50 sm:h-60 sm:min-w-0 min-[1500px]:w-60 min-[1500px]:h-68 min-[1920px]:w-70 min-[1920px]:h-72 min-[2560px]:w-85 min-[2560px]:h-80 border border-gray-400 hover:border-white hover:shadow-sm shadow-white rounded-lg bg-[rgb(24,26,21)]/50 text-white font-semibold text-center cursor-pointer  bg-cover  bg-center bg-no-repeat" style={{ backgroundImage: `url(${search.img})` }} key={search.name}>
-                <div className="w-full bg-linear-to-t from-amber-900/85 via-black/50 to-transparent rounded-b-lg px-2 py-3">{search.name}</div>
+                <div className="h-auto w-full gap-2 min-[640px]:gap-3 min-[2560px]:gap-6 flex flex-wrap "> {TopMatch.map((search) => (
+            <div className="flex flex-col  justify-end w-[45%] min-w-30 h-40 min-[640px]:w-50 min-[640px]:h-60 min-[640px]:min-w-0 min-[1500px]:w-60 min-[1500px]:h-68 min-[1920px]:w-70 min-[1920px]:h-72 min-[2560px]:w-136 min-[2560px]:h-120 border border-gray-400 hover:border-white hover:shadow-sm shadow-white rounded-lg bg-[rgb(24,26,21)]/50 text-white font-semibold text-center cursor-pointer  bg-cover  bg-center bg-no-repeat" style={{ backgroundImage: `url(${search.img})` }} key={search.name}>
+                <div className="w-full bg-linear-to-t from-amber-900/85 via-black/50 to-transparent rounded-b-lg px-2 py-3 min-[2560px]:px-6 min-[2560px]:py-6 min-[2560px]:text-4xl">{search.name}</div>
             </div>  
         ))}</div>
                 
@@ -94,13 +94,13 @@ function SearchBox(){
             
             {/* More Picks */}
             <div> 
-                <div className="flex flex-col gap-6 sm:gap-10">
-                <h1 className="text-[rgb(235,231,220)]/95 text-base sm:text-xl min-[1500px]:text-2xl min-[1920px]:text-3xl">More Picks</h1>
+                <div className="flex flex-col gap-6 min-[640px]:gap-10 min-[2560px]:gap-16">
+                <h1 className="text-[rgb(235,231,220)]/95 text-base min-[640px]:text-xl min-[1500px]:text-2xl min-[1920px]:text-3xl min-[2560px]:text-6xl">More Picks</h1>
             <div>
                 
-                <div className="h-auto w-full gap-2 sm:gap-3 flex flex-wrap "> {TopMatch.map((search) => (
-            <div className="flex flex-col  justify-end w-[45%] min-w-30 h-40 sm:w-50 sm:h-60 sm:min-w-0 min-[1500px]:w-60 min-[1500px]:h-68 min-[1920px]:w-70 min-[1920px]:h-72 min-[2560px]:w-85 min-[2560px]:h-80 border border-gray-400 hover:border-white hover:shadow-sm shadow-white rounded-lg bg-[rgb(24,26,21)]/50 text-white font-semibold text-center cursor-pointer  bg-cover  bg-center bg-no-repeat" style={{ backgroundImage: `url(${search.img})` }} key={search.name}>
-                <div className="w-full bg-linear-to-t from-indigo-900/70 via-black/50 to-transparent rounded-b-lg px-2 py-3">{search.name}</div>
+                <div className="h-auto w-full gap-2 min-[640px]:gap-3 min-[2560px]:gap-6 flex flex-wrap "> {MorePicks.map((search) => (
+            <div className="flex flex-col  justify-end w-[45%] min-w-30 h-40 min-[640px]:w-50 min-[640px]:h-60 min-[640px]:min-w-0 min-[1500px]:w-60 min-[1500px]:h-68 min-[1920px]:w-70 min-[1920px]:h-72 min-[2560px]:w-136 min-[2560px]:h-120 border border-gray-400 hover:border-white hover:shadow-sm shadow-white rounded-lg bg-[rgb(24,26,21)]/50 text-white font-semibold text-center cursor-pointer  bg-cover  bg-center bg-no-repeat" style={{ backgroundImage: `url(${search.img})` }} key={search.name}>
+                <div className="w-full bg-linear-to-t from-indigo-900/70 via-black/50 to-transparent rounded-b-lg px-2 py-3 min-[2560px]:px-6 min-[2560px]:py-6 min-[2560px]:text-4xl">{search.name}</div>
             </div>  
         ))}</div>
                 
@@ -108,27 +108,29 @@ function SearchBox(){
             </div>            
             </div>
         {/* Creator details */}
+        <footer className="w-full">
             <div className="w-full h-auto border-t border-t-white/40 bg-slate-900">
-                <div className="text-gray-500 flex flex-col items-center ">
-                    <div className="w-full flex justify-between p-2">
-                    <div>Created by - Student of Technocrats institute of technology</div>
-                    <div>Post - Front end developer</div>
+                <div className="text-gray-500 w-full flex flex-col items-center">
+                    <div className="w-full flex justify-between items-center p-2 min-[2560px]:p-8 text-[clamp(8px,1vw+6px,18px)] min-[2560px]:text-[clamp(24px,2vw+16px,54px)]">
+                    <div className="min-w-0 max-w-[50%]">Created by - Student of Technocrats institute of technology</div>
+                    <div className="min-w-0 max-w-[50%] text-right">Post - Front end developer</div>
                     </div>
-                    <div className="w-full flex justify-between p-2">
-                        <div>Room partner of Jay upwanshi / Nalla</div>
-                        <div>Currently BCA is pursuing us </div>
+                    <div className="w-full flex justify-between items-center p-2 min-[2560px]:p-8 text-[clamp(8px,1vw+6px,18px)] min-[2560px]:text-[clamp(24px,2vw+16px,54px)]">
+                        <div className="min-w-0 max-w-[50%]">Room partner of Jay upwanshi / Nalla</div>
+                        <div className="min-w-0 max-w-[50%] text-right">Currently BCA is pursuing us </div>
                     </div>
-                    <div className="w-50 h-50 bg-[url('LumoraRealm-nobg.png')] bg-contain"></div>
-                    <div className="w-full flex justify-between p-2" >
-                    <div >Born in 2006</div>
-                    <div>Proud father of anuraj,vansh,rudra,prince and 2 others</div>
+                    <div className="w-30 h-30 min-[450px]:w-40 min-[450px]:h-40 min-[640px]:w-50 min-[640px]:h-50 min-[1920px]:w-64 min-[1920px]:h-64 min-[2560px]:w-md min-[2560px]:h-112 bg-[url('LumoraRealm-nobg.png')] bg-contain bg-center bg-no-repeat"></div>
+                    <div className="w-full flex justify-between items-center p-2 min-[2560px]:p-8 text-[clamp(8px,1vw+6px,18px)] min-[2560px]:text-[clamp(24px,2vw+16px,54px)]" >
+                    <div className="min-w-0 max-w-[50%]">Born in 2006</div>
+                    <div className="min-w-0 max-w-[50%] text-right">Proud father of anuraj,vansh,rudra,prince and 2 others</div>
                     </div>
-                    <div className="w-full flex justify-between p-2" >
-                    <div >Used React.js + vite and tailwind  for development</div>
-                    <div>Used OpenCode for Responsiveness</div>
+                    <div className="w-full flex justify-between items-center p-2 min-[2560px]:p-8 text-[clamp(8px,1vw+6px,18px)] min-[2560px]:text-[clamp(24px,2vw+16px,54px)]" >
+                    <div className="min-w-0 max-w-[50%]">Used React.js + vite and tailwind  for development</div>
+                    <div className="min-w-0 max-w-[50%] text-right">Used OpenCode for Responsiveness</div>
                     </div>
                 </div>
             </div>
+            </footer>
         </div>
     )
 }

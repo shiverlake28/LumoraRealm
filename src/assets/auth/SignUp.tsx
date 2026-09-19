@@ -62,14 +62,14 @@ function SignUp(){
             {/* Email */}
                     <label className="text-lg  text-[rgb(25,25,28)]">Email</label>
                     <input type="email" value={Email} onChange={(e) => {SetEmail(e.target.value); SetEmailError("")}} placeholder="e.g:you@gmail.com"  className="w-full h-10 pl-2 text-black border border-black/90 rounded-md bg-[rgb(177,178,181)] placeholder:text-black/40 hover:shadow-sm hover:shadow-black"/>
-                    {EmailError && (<p className="text-red-400 text-[10px] h-2">{EmailError}</p>)}
+                    {EmailError && (<p className="text-pink-950 text-[10px] h-2">{EmailError}</p>)}
                     <a href="https://www.google.com" className="text-[12px] pl-1">Forget Email?</a>
                     {/* Password */}
                     <label className="text-lg  text-[rgb(25,25,28)]">Password</label>
                     <div className="relative w-full">
                     <input type={ShowPassword?'text': "password"} value={Pword} onChange={(e) => {SetPword(e.target.value); SetPassError("")}} placeholder="Password"  className="pl-2  text-black w-full h-10 border border-black/90 rounded-md bg-[rgb(177,178,181)] placeholder:text-black/40 hover:shadow-sm hover:shadow-black"/>
                     <p className="select-none absolute right-3 top-3 cursor-pointer text-black" onClick={()=>{SetShowPassword(!ShowPassword)}}>{ShowPassword? <FaEyeSlash/> : <FaEye/>}</p></div>
-                    {PassError && (<p className="text-red-400 text-[10px] h-2">{PassError}</p>)}
+                    {PassError && (<p className="text-pink-950 text-[10px] h-2">{PassError}</p>)}
                     <a href="https://www.google.com" className="text-[12px] pl-1">Forget Password?</a>
 
                 </form>

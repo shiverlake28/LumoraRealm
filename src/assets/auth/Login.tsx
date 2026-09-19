@@ -54,7 +54,7 @@ function Login(){
                 <form action=" " id="LoginForm"  onSubmit={HandleSubmit} className="w-full px-4 md:px-5 flex flex-col gap-3 h-auto   text-[rgb(25,25,28)]/90 ">
                     <label className="text-lg  text-[rgb(25,25,28)]">Email</label>
                     <input type="email" value={Email} placeholder="e.g:you@gmail.com" onChange={(e)=>{SetEmail(e.target.value); SetEmailError("");}} className=" pl-2 text-black  w-full h-10 border border-black/90 rounded-md bg-[rgb(177,178,181)] placeholder:text-black/40 hover:shadow-md hover:shadow-black"/>
-                    {EmailError && (<p className="text-red-400 text-[10px] h-2">{EmailError}</p>)}
+                    {EmailError && (<p className="text-pink-950 text-[10px] h-2">{EmailError}</p>)}
                     <a href="https://www.google.com" className="text-[12px] pl-1">Forget Email?</a>
                     {/* password */}
                     <label className="text-lg  text-[rgb(25,25,28)]">Password</label>
@@ -62,7 +62,7 @@ function Login(){
                     
                     <input type={ShowPassword?"text":"password"} onChange={(e)=>{SetPword(e.target.value);SetPwordError("");}} placeholder="Password"  className="w-full pl-2 text-black h-10 border border-black/90 rounded-md bg-[rgb(177,178,181)] placeholder:text-black/40 hover:shadow-md hover:shadow-black"/>
                     <p className="select-none absolute right-3 top-3 cursor-pointer text-black" onClick={()=>{SetShowPassword(!ShowPassword)}}>{ShowPassword? <FaEyeSlash/> : <FaEye/>}</p></div>    
-                    {PwordError && (<p className="text-red-400 text-[10px] h-2">{PwordError}</p>)}
+                    {PwordError && (<p className="text-pink-950 text-[10px] h-2">{PwordError}</p>)}
                     <a href="https://www.google.com" className="text-[12px] pl-1">Forget Password?</a>
                 </form>
                 {/* Buttons */}
