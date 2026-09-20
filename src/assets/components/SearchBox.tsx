@@ -84,11 +84,7 @@ function SearchBox(){
                 <h1 className="text-[rgb(235,231,220)]/95 text-base min-[640px]:text-xl min-[1500px]:text-2xl 3xl:text-3xl min-[2560px]:text-6xl">Top Match</h1>
             <div>
                 
-                <div className="h-auto w-full gap-2 min-[640px]:gap-3 4xl:gap-6 flex flex-wrap "> {TopMatch.map((search) => (
-            <div className="flex flex-col  justify-end w-[45%] min-w-30 h-40 min-[640px]:w-50 min-[640px]:h-60 min-[640px]:min-w-0 min-[1500px]:w-60 min-[1500px]:h-68 3xl:w-70 3xl:h-72 4xl:w-136 4xl:h-120 border border-gray-400 hover:border-white hover:shadow-sm shadow-white rounded-lg bg-[rgb(24,26,21)]/50 text-white font-semibold text-center cursor-pointer  bg-cover  bg-center bg-no-repeat" style={{ backgroundImage: `url(${search.img})` }} key={search.name}>
-                <div className="w-full bg-linear-to-t from-amber-900/85 via-black/50 to-transparent rounded-b-lg px-2 py-3 4xl:px-6 4xl:py-6 4xl:text-4xl">{search.name}</div>
-            </div>  
-        ))}</div>
+                <div className="h-auto w-full gap-2 min-[640px]:gap-3 4xl:gap-6 flex flex-wrap "> </div>
                 
             </div></div>}
             
