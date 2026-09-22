@@ -51,7 +51,7 @@ function SignUp(){
                 <p className="bg-linear-to-br from-[rgb(255,247,242)] to-[rgb(214,168,150)] bg-clip-text text-transparent text-2xl md:text-3xl"> LumoraRealm </p>
                 <BsStars className="w-8 h-8 text-amber-100 -scale-x-100 " />
                 </div>
-                <p className="bg-linear-to-br from-[rgb(255,247,242)] to-[rgb(214,168,150)] bg-clip-text text-transparent text-lg md:text-xl capitalize">A world where illuminated stories  come to life.</p>
+                <p className="bg-linear-to-br from-[rgb(255,247,242)] to-[rgb(214,168,150)] bg-clip-text text-transparent text-lg md:text-lg capitalize">A world where illuminated stories  come to life.</p>
             </div>
             {/*SignUp card */}
             <div className="w-auto md:w-100 h-auto md:h-auto pt-1 flex flex-col items-center justify-start gap-2 md:gap-3 bg-linear-to-b from-[rgb(105,108,111)] via-[rgb(125,123,120)] to-[rgb(145,137,126)] border-3 border-[rgb(202,190,165)]  shadow-lg shadow-gray-400/50 hover:shadow-gray-400 rounded-3xl">

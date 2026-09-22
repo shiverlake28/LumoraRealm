@@ -44,7 +44,7 @@ function Login(){
                 <p className="bg-linear-to-br from-[rgb(255,247,242)] to-[rgb(214,168,150)] bg-clip-text text-transparent text-2xl md:text-3xl"> LumoraRealm </p>
                 <BsStars className="w-8 h-8 text-amber-100 -scale-x-100" />
                 </div>
-                <p className="bg-linear-to-br from-[rgb(255,247,242)] to-[rgb(214,168,150)] bg-clip-text text-transparent text-lg md:text-xl capitalize">A world where illuminate stories  come to life.</p>
+                <p className="bg-linear-to-br from-[rgb(255,247,242)] to-[rgb(214,168,150)] bg-clip-text text-transparent text-lg md:text-lg capitalize">A world where illuminated stories  come to life.</p>
             </div>
             {/*Login */}
             <div className="w-[90%] max-w-100 mx-auto h-auto   pt-1 flex flex-col items-center justify-start gap-2 md:gap-3 bg-linear-to-b from-[rgb(105,108,111)] via-[rgb(125,123,120)] to-[rgb(145,137,126)] border-3 border-[rgb(202,190,165)]  shadow-lg shadow-gray-400/50  rounded-3xl">
@@ -75,7 +75,7 @@ function Login(){
                     <a href=""><FaGithub className="w-8 h-8"/></a>
                     <a href=""><FaLinkedin className="w-8 h-8"/></a>
                 </div>
-                <p className="text-[12px] w-full px-4 md:pl-6 pb-5 text-[rgb(45,45,48)] font-bold ">Don't have an account? <Link to="/SignUps"  className="underline text-[rgb(248,246,236)]/90 ">SignUp</Link></p>
+                <p className="text-[12px] w-full px-4 md:pl-6 pb-5 text-[rgb(45,45,48)] font-bold ">Don't have an account? <Link to="/SignUp"  className="underline text-[rgb(248,246,236)]/90 ">SignUp</Link></p>
             </div>
         </div>
     )

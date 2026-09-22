@@ -13,7 +13,7 @@ function SplashScreen(){
     const taglinetimer = setTimeout(()=> setShowTagline(true),6000 );
     const fadeTimer = setTimeout(() => {
         setFadeOut(true);
-    }, 100000000);
+    }, 10000);
 
     
     return () => {
