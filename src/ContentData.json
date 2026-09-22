@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "Avengers: CivilWar",
+    "image": "marvel.jpg",
+    "type": "Movie",
+    "genre": "Action • Adventure • Sci-Fi",
+    "year": 2019,
+    "rating": 8.4,
+    "description": "The Avengers make a final attempt to undo the destruction caused by Thanos and restore the universe."
+  },
+  {
+    "id": 2,
+    "name": "Stranger Things",
+    "image": "strangers_thing.jpg",
+    "type": "Series",
+    "genre": "Drama • Mystery • Sci-Fi",
+    "year": 2016,
+    "rating": 8.6,
+    "description": "A group of friends uncover strange supernatural events and secret experiments in their small town."
+  },
+  {
+    "id": 3,
+    "name": "Wednesday",
+    "image": "wednesday.jpg",
+    "type": "Series",
+    "genre": "Comedy • Mystery • Fantasy",
+    "year": 2022,
+    "rating": 8.0,
+    "description": "Wednesday Addams investigates mysterious events while attending Nevermore Academy."
+  },
+  {
+    "id": 4,
+    "name": "The Batman",
+    "image": "Batman.jpg",
+    "type": "Movie",
+    "genre": "Action • Crime • Drama",
+    "year": 2022,
+    "rating": 7.8,
+    "description": "Batman investigates a series of crimes that reveal a deeper conspiracy within Gotham City."
+  },
+  {
+    "id": 5,
+    "name": "Formula 1",
+    "image": "Formula1.jpg",
+    "type": "Sport",
+    "genre": "Motorsport • Racing",
+    "year": 2026,
+    "rating": 9.0,
+    "description": "Follow the world's fastest drivers and teams as they compete across the Formula 1 championship."
+  },
+  {
+    "id": 6,
+    "name": "Interstellar",
+    "image": "interstellar.jpg",
+    "type": "Movie",
+    "genre": "Adventure • Drama • Sci-Fi",
+    "year": 2014,
+    "rating": 8.7,
+    "description": "A team of explorers travels through a wormhole in search of a new home for humanity."
+  },
+  {
+    "id": 7,
+    "name": "Inception",
+    "image": "inception.jpg",
+    "type": "Movie",
+    "genre": "Action • Sci-Fi • Thriller",
+    "year": 2010,
+    "rating": 8.8,
+    "description": "A skilled thief enters people's dreams to steal secrets and is given an impossible task."
+  },
+  {
+    "id": 8,
+    "name": "The Dark Knight",
+    "image": "dark-knight.jpg",
+    "type": "Movie",
+    "genre": "Action • Crime • Drama",
+    "year": 2008,
+    "rating": 9.0,
+    "description": "Batman faces a criminal mastermind who pushes Gotham and its heroes into chaos."
+  },
+  {
+    "id": 9,
+    "name": "Breaking Bad",
+    "image": "breaking-bad.jpg",
+    "type": "Series",
+    "genre": "Crime • Drama • Thriller",
+    "year": 2008,
+    "rating": 9.5,
+    "description": "A chemistry teacher enters the criminal world after turning to the production of illegal drugs."
+  },
+  {
+    "id": 10,
+    "name": "Spider-Man: No Way Home",
+    "image": "spiderman.jpg",
+    "type": "Movie",
+    "genre": "Action • Adventure • Fantasy",
+    "year": 2021,
+    "rating": 8.2,
+    "description": "Spider-Man's identity is exposed, leading him to seek help and face unexpected visitors from other worlds."
+  }
+]

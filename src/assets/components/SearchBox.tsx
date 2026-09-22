@@ -8,13 +8,19 @@ const TrendingSearches = [
     {name:"The Batman",img:"Batman.jpg"},
     {name:"Formula 1",img:"Formula1.jpg"}
 ]
-const TopMatch = [
-    {name:"Avengers",img:"marvel.jpg"},
-    {name:"Stranger Things",img:"strangers_thing.jpg"},
-    {name:"Wednesday",img:"wednesday.jpg"},
-    {name:"The Batman",img:"Batman.jpg"},
-    {name:"Formula 1",img:"Formula1.jpg"}
-]
+type Content = {
+    id: number
+    name: string
+    image: string
+    type: string
+    genre: string
+    year: number
+    rating: number
+    description: string
+}
+
+
+
 const MorePicks = [
     {name:"Avengers",img:"marvel.jpg"},
     {name:"Stranger Things",img:"strangers_thing.jpg"},
@@ -28,12 +34,15 @@ function SearchBox(){
         if (!Search.trim()){
             return
         }
-        else{
-            SetRecentSearches((prev) => [Search , ...prev].slice(0,3))
-            SetHasSearched(true)
-        }
-
+        const Result = ContentData.find((content) =>
+        content.name.toLowerCase().includes(Search.toLowerCase())
+    )
+        SetSelectedContent(Result ?? null)
+        SetRecentSearches((prev) => [Search , ...prev].slice(0,3))
+        SetHasSearched(true)
     }
+    const [ContentData,SetContentData] = useState<Content[]>([])
+    const [SelectedContent, SetSelectedContent] = useState<Content |null>(null);
     const [HasSearched,SetHasSearched] = useState(false)
     const [RecentSearches,SetRecentSearches] = useState<string[]>([])
     const [Search,SetSearch] = useState("")
@@ -44,7 +53,13 @@ function SearchBox(){
         window.addEventListener("resize", onResize)
         return ()=> window.removeEventListener("resize", onResize)
     }, [])
-
+    useEffect(() => {
+    fetch("src/ContentData.json")
+        .then((response) => response.json())
+        .then((data) => SetContentData(data));
+        
+}, []);
+    
     return(
         <div>
 
@@ -81,13 +96,28 @@ function SearchBox(){
             </div> </div>}
             {/* Top Match */}
             {HasSearched && <div className="flex flex-col gap-6 min-[640px]:gap-10 4xl:gap-16">
+                
                 <h1 className="text-[rgb(235,231,220)]/95 text-base min-[640px]:text-xl min-[1500px]:text-2xl 3xl:text-3xl min-[2560px]:text-6xl">Top Match</h1>
-            <div>
-                
-                <div className="h-auto w-full gap-2 min-[640px]:gap-3 4xl:gap-6 flex flex-wrap "> </div>
-                
+            <div className="w-full h-auto flex gap-4 p-3 rounded-2xl border border-gray-400 bg-[rgb(24,26,21)]/50 hover:border-gray-300">
+            <div className="w-40 h-56 rounded-lg  bg-cover bg-center bg-no-repeat"style={{ backgroundImage: `url(${SelectedContent?.image})` }}> {/*Poster*/} 
+                </div>
+                <div className="flex flex-col w-120 gap-4">{/*Information*/}
+            <div className=" text-[rgb(235,231,220)]/95">{/*Movie name*/}
+                {SelectedContent?.name}
+            </div>
+            <div className=" text-[rgb(235,231,220)]/95">{/*Show type*/}
+                {SelectedContent?.type} • {SelectedContent?.genre}               
+            </div>
+            <div className="text-[rgb(235,231,220)]/95">
+                    ⭐ {SelectedContent?.rating}/10
+                </div>
+            <div className="text-[rgb(235,231,220)]/95 leading-relaxed">{/*Description*/}
+                {SelectedContent?.description}
+            </div>
+            <button className="w-50 border-2 border-gray-300 bg-white hover:bg-white/90 hover:scale-110 duration-400 active:a rounded-lg">Watch Now</button>
+                </div>
             </div></div>}
-            
+
             {/* More Picks */}
             <div> 
                 <div className="flex flex-col gap-6 min-[640px]:gap-10 4xl:gap-16">
