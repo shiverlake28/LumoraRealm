@@ -7,7 +7,8 @@
     "genre": "Action • Adventure • Sci-Fi",
     "year": 2019,
     "rating": 8.4,
-    "description": "The Avengers make a final attempt to undo the destruction caused by Thanos and restore the universe."
+    "description": "The Avengers make a final attempt to undo the destruction caused by Thanos and restore the universe.",
+    "clicks":0
   },
   {
     "id": 2,
@@ -17,7 +18,8 @@
     "genre": "Drama • Mystery • Sci-Fi",
     "year": 2016,
     "rating": 8.6,
-    "description": "A group of friends uncover strange supernatural events and secret experiments in their small town."
+    "description": "A group of friends uncover strange supernatural events and secret experiments in their small town.",
+    "clicks":0
   },
   {
     "id": 3,
@@ -27,7 +29,8 @@
     "genre": "Comedy • Mystery • Fantasy",
     "year": 2022,
     "rating": 8.0,
-    "description": "Wednesday Addams investigates mysterious events while attending Nevermore Academy."
+    "description": "Wednesday Addams investigates mysterious events while attending Nevermore Academy.",
+    "clicks":0
   },
   {
     "id": 4,
@@ -37,7 +40,8 @@
     "genre": "Action • Crime • Drama",
     "year": 2022,
     "rating": 7.8,
-    "description": "Batman investigates a series of crimes that reveal a deeper conspiracy within Gotham City."
+    "description": "Batman investigates a series of crimes that reveal a deeper conspiracy within Gotham City.",
+    "clicks":0
   },
   {
     "id": 5,
@@ -47,7 +51,8 @@
     "genre": "Motorsport • Racing",
     "year": 2026,
     "rating": 9.0,
-    "description": "Follow the world's fastest drivers and teams as they compete across the Formula 1 championship."
+    "description": "Follow the world's fastest drivers and teams as they compete across the Formula 1 championship.",
+    "clicks":0
   },
   {
     "id": 6,
@@ -57,7 +62,8 @@
     "genre": "Adventure • Drama • Sci-Fi",
     "year": 2014,
     "rating": 8.7,
-    "description": "A team of explorers travels through a wormhole in search of a new home for humanity."
+    "description": "A team of explorers travels through a wormhole in search of a new home for humanity.",
+    "clicks":0
   },
   {
     "id": 7,
@@ -67,7 +73,8 @@
     "genre": "Action • Sci-Fi • Thriller",
     "year": 2010,
     "rating": 8.8,
-    "description": "A skilled thief enters people's dreams to steal secrets and is given an impossible task."
+    "description": "A skilled thief enters people's dreams to steal secrets and is given an impossible task.",
+    "clicks":0
   },
   {
     "id": 8,
@@ -77,7 +84,8 @@
     "genre": "Action • Crime • Drama",
     "year": 2008,
     "rating": 9.0,
-    "description": "Batman faces a criminal mastermind who pushes Gotham and its heroes into chaos."
+    "description": "Batman faces a criminal mastermind who pushes Gotham and its heroes into chaos.",
+    "clicks":0
   },
   {
     "id": 9,
@@ -87,7 +95,8 @@
     "genre": "Crime • Drama • Thriller",
     "year": 2008,
     "rating": 9.5,
-    "description": "A chemistry teacher enters the criminal world after turning to the production of illegal drugs."
+    "description": "A chemistry teacher enters the criminal world after turning to the production of illegal drugs.",
+    "clicks":0
   },
   {
     "id": 10,
@@ -97,6 +106,7 @@
     "genre": "Action • Adventure • Fantasy",
     "year": 2021,
     "rating": 8.2,
-    "description": "Spider-Man's identity is exposed, leading him to seek help and face unexpected visitors from other worlds."
+    "description": "Spider-Man's identity is exposed, leading him to seek help and face unexpected visitors from other worlds.",
+    "clicks":0
   }
 ]
