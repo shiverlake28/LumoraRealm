@@ -18,6 +18,7 @@ type Content = {
     year: number
     rating: number
     description: string
+    clicks:number
 }
 
 const MorePicks = [
@@ -29,6 +30,18 @@ const MorePicks = [
 ]
 
 function SearchBox(){
+    function HandleTrending(){
+        const SortClicks = ContentData.sort()
+        console.log(SortClicks)   
+    }
+    function HandleContentClick(id:number){
+        const UpdatedContentClicks = ContentData.map((content)=>{
+            return content.id === id ?
+            {...content,clicks:content.clicks + 1 }:content
+        } )
+        SetContentData(UpdatedContentClicks)
+    }
+    
     function HandleSearch(Search: string){
         if (!Search.trim()){
             return
@@ -81,7 +94,7 @@ function SearchBox(){
         ))}<X className="h-4 w-4 min-[640px]:h-5 min-[640px]:w-5 3xl:h-6 3xl:w-6 4xl:h-9 4xl:w-9 mt-1" onClick={()=>{SetRecentSearches([])}} />
             </div></div>}
              {/*Trending Searches  */}
-            {!HasSearched && <div className="flex flex-col gap-6 min-[640px]:gap-10 4xl:gap-16">
+            {!HasSearched && <div className="flex flex-col gap-6 min-[640px]:gap-10 4xl:gap-16"  >
             <h1 className="text-[rgb(235,231,220)]/95 text-base min-[640px]:text-xl min-[1500px]:text-2xl 3xl:text-3xl 4xl:text-6xl">Trending Searches</h1> 
             <div> 
                 <div className="h-auto w-full gap-2 min-[640px]:gap-3 4xl:gap-6 flex flex-wrap cursor-pointer"> {TrendingSearches.map((search) => (
@@ -117,7 +130,7 @@ function SearchBox(){
             {SelectedContent.description}
         </div>  
 
-        <button className="w-50 border-2 border-gray-300 bg-white hover:bg-white/90 hover:scale-110 duration-400 active:a rounded-lg">
+        <button className="w-50 border-2 border-gray-300 bg-white hover:bg-white/90 hover:scale-110 duration-400 active:a rounded-lg" onClick={()=> {HandleContentClick(SelectedContent.id)}}>
             Watch Now
         </button>
     </>
